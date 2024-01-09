@@ -32,3 +32,6 @@
   env/
   .env
   ```
+- jupyter notebook 사용하기
+  - 주피터 노트북 파일(`.ipynb` 확장자) 만들기
+  - 커널 선택 : `env/bin/python`
