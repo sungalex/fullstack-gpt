@@ -23,7 +23,7 @@
   ```zsh
   pip install -r requirements.txt
   ```
-- .env 파일 만들기 : 환경변수 저장하기
+- `.env` 파일 만들기 : 환경변수 저장하기
   ```python
   OPENAI_API_KEY="asdf..."
   ```
