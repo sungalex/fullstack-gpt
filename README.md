@@ -83,3 +83,65 @@
 
   chat.predict_messages(prompt)
   ```
+
+- OutputParser
+
+  ```python
+  from langchain.schema import BaseOutputParser
+
+  class CommonOutputParser(BaseOutputParser):
+
+    def parse(self, text):
+        items = text.strip().split(",")
+        return list(map(str.strip, items))
+  ```
+
+- LCEL (LangChain Expression Language)
+
+  ```python
+  template = ChatPromptTemplate.from_messages([
+    ("system", "You are a list generating machine. Everything you are asked will be answered with a comma separated list of max {max_items} in lowercase. Do NOT reply with anything else."),
+    ("human", "{question}"),
+  ])
+
+  chain = template | chat | CommonOutputParser()
+  chain.invoke({
+      "max_items": 10,
+      "question": "태양계의 행성들?"
+  })
+  ```
+
+- Streaming & Callbacks
+
+  ```python
+  from langchain.callbacks import StreamingStdOutCallbackHandler
+
+  chat = ChatOpenAI(
+    temperature=0.1,
+    streaming=True,
+    callbacks=[StreamingStdOutCallbackHandler(),]
+    )
+  ```
+
+- Chaining Chains
+
+  ```python
+  chef_prompt = ChatPromptTemplate.from_messages([
+      ("system", "답변은 한국어로 합니다."),
+      ("human", "I want to cook {cuisine} food.")
+  ])
+
+  chef_chain = chef_prompt | chat
+
+  veg_chef_prompt = ChatPromptTemplate.from_messages([
+    ("system", "You are a vegetarian chef specialized on making traditional recipies vegetarian. You find alternative ingredients and explain their preparation. You don't radically modify the recipe. If there is no alternative for a food just say you don't know how to replace it. 답변은 한국어로 합니다."),
+    ("human", "{recipe}")
+  ])
+
+  veg_chef_chain = veg_chef_prompt | chat
+
+  final_chain = {"recipe": chef_chain} | veg_chef_chain
+  final_chain.invoke({
+      "cuisine": "indian"
+  })
+  ```
