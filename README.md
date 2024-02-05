@@ -1,12 +1,18 @@
 # 노마드코더 풀스택 GPT
 
-- https://nomadcoders.co/fullstack-gpt/lobby
+**Langchain과 LLM을 이용한 앱 만들기**
 
-## OpenAI ChatGPT Plus 가입하기
+- GPT 기반 앱 7개 만들기
+- 자체 데이터에 GPT 활용하기
+- 나만의 ChatGPT 플러그인 만들기
 
-- https://chat.openai.com/#pricing
+## 1. Introduction
 
-## 프로젝트 환경 구성하기
+- 강의 링크 : https://nomadcoders.co/fullstack-gpt
+
+- OpenAI ChatGPT Plus 가입하기 : https://chat.openai.com/#pricing
+
+## 2. 프로젝트 환경 구성하기
 
 - 프로젝트 폴더 만들기 : 폴더명 `fullstack-gpt`
 - git 초기화
@@ -36,7 +42,7 @@
   - 주피터 노트북 파일(`.ipynb` 확장자) 만들기
   - 커널 선택 : `env/bin/python`
 
-## WELCOME TO LANGCHAIN
+## 3. WELCOME TO LANGCHAIN
 
 - LLMs and Chat Models
 
@@ -145,3 +151,51 @@
       "cuisine": "indian"
   })
   ```
+
+## 4. Model IO
+
+[자세히 보기](docs/04_model_io.md)
+
+## 5. MEMORY
+
+[자세히 보기](docs/05_memory.md)
+
+## 6. RAG
+
+[자세히 보기](docs/06_rag.md)
+
+## 7. DOCUMENTGPT
+
+[자세히 보기](docs/07_document_gpt.md)
+
+## 8. PRIVATEGPT
+
+[자세히 보기](docs/08_private_gpt.md)
+
+## 9. QUIZGPT
+
+[자세히 보기](docs/09_quiz_gpt.md)
+
+## 10. SITEGPT
+
+[자세히 보기](docs/10_site_gpt.md)
+
+## 11. MEETINGGPT
+
+[자세히 보기](docs/11_meeting_gpt.md)
+
+## 12. INVESTORGPT
+
+[자세히 보기](docs/12_investor_gpt.md)
+
+## 13. CHEFGPT
+
+[자세히 보기](docs/13_chef_gpt.md)
+
+## 14. ASSISTANTS API
+
+[자세히 보기](docs/14_assistants_api.md)
+
+## 15. AZUREGPT & AWS BEDROCK
+
+[자세히 보기](docs/15_azure_gpt&aws_bedrock.md)
