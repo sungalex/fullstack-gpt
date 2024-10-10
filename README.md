@@ -21,11 +21,14 @@
   ```
 - 가상환경 만들고 실행하기
   ```zsh
-  python -m venv ./env
-  source env/bin/activate
+  python -m venv ./venv
+  # MAC
+  source venv/bin/activate
+  # Windows
+  ./venv/scripts/activate.bat
   ```
 - requirements.txt 가져오기(복사) : https://gist.github.com/serranoarevalo/72d77c36dde1cc3ffec34105eb666140
-- 패키지 설치하기
+- 패키지 설치하기 (python 10 버전 호환)
   ```zsh
   pip install -r requirements.txt
   ```
@@ -36,11 +39,12 @@
 - `.gitignore` 파일 만들기
   ```python
   env/
+  venv/
   .env
   ```
 - jupyter notebook 사용하기
   - 주피터 노트북 파일(`.ipynb` 확장자) 만들기
-  - 커널 선택 : `env/bin/python`
+  - 커널 선택 : `Ctrl` + `Shift` + `P` \> `Python: select interpreter`를 찾아서 `./venv/bin/python` 선택
 
 ## 3. WELCOME TO LANGCHAIN
 
