@@ -25,7 +25,9 @@
   # MAC
   source venv/bin/activate
   # Windows
-  ./venv/scripts/activate.bat
+  ./venv/scripts/activate
+  ./venv/scripts/activate.bat   # for 명령 프롬프트
+  ./venv/scripts/activate.ps1   # for PowerShell
   ```
 - requirements.txt 가져오기(복사) : https://gist.github.com/serranoarevalo/72d77c36dde1cc3ffec34105eb666140
 - 패키지 설치하기 (python 10 버전 호환)
